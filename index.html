@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <button id="toggle-dark-mode">Toggle Dark Mode</button>
+
+    <div class="container">
+        <h1>COVID-19 Tracker</h1>
+        <div class="stats">
+            <div class="cases">
+                <h2>Total Cases</h2>
+                <p id="total-cases">Loading...</p>
+            </div>
+            <div class="recovered">
+                <h2>Total Recovered</h2>
+                <p id="total-recovered">Loading...</p>
+            </div>
+            <div class="deaths">
+                <h2>Total Deaths</h2>
+                <p id="total-deaths">Loading...</p>
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+    <!-- Search Box -->
+    <input type="text" id="country-search" placeholder="Search for a country...">
+    <button onclick="searchCountry()">Search</button>
+
+    <!-- Chart Canvas -->
+    <canvas id="chart"></canvas>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+    <script src="./script.js"></script>
+    <script src="./darkmode.js"></script>
+</body>
+
+</html>
